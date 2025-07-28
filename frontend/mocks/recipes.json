@@ -1,0 +1,80 @@
+[
+  {
+    "_id": "1",
+    "title": "Spaghetti Carbonara",
+    "description": "A classic Italian pasta dish with eggs, cheese, pancetta and pepper.",
+    "image": "https://images.unsplash.com/photo-1604908177223-f3d45ced4a2b?auto=format&fit=crop&w=800&q=60",
+    "ingredients": [
+      "200g spaghetti",
+      "100g pancetta or bacon, diced",
+      "2 large eggs",
+      "50g grated pecorino cheese",
+      "50g grated parmesan cheese",
+      "2 cloves garlic, minced",
+      "Salt and freshly ground black pepper"
+    ],
+    "steps": [
+      "Boil the spaghetti in salted water until al dente.",
+      "Fry the pancetta until crispy, then add garlic and cook briefly.",
+      "Beat eggs in a bowl and mix with grated cheeses.",
+      "Drain pasta, reserving a little cooking water.",
+      "Combine pasta with pancetta and remove from heat.",
+      "Quickly stir in the egg and cheese mixture, adding pasta water if needed for creaminess.",
+      "Season with salt and plenty of black pepper, then serve immediately."
+    ],
+    "tags": ["Italian", "Pasta", "Quick"]
+  },
+  {
+    "_id": "2",
+    "title": "Vegetarian Chili",
+    "description": "A hearty, spicy chili packed with vegetables and beans.",
+    "image": "https://images.unsplash.com/photo-1609851197733-4f567cb9fcf7?auto=format&fit=crop&w=800&q=60",
+    "ingredients": [
+      "1 onion, diced",
+      "2 cloves garlic, minced",
+      "1 red bell pepper, diced",
+      "1 zucchini, diced",
+      "1 can black beans, drained",
+      "1 can kidney beans, drained",
+      "1 can diced tomatoes",
+      "2 tbsp chili powder",
+      "1 tsp cumin",
+      "1 tsp smoked paprika",
+      "Salt and pepper to taste"
+    ],
+    "steps": [
+      "Sauté onion and garlic in a large pot until softened.",
+      "Add bell pepper and zucchini; cook until slightly tender.",
+      "Stir in chili powder, cumin, and smoked paprika; cook until fragrant.",
+      "Add beans and diced tomatoes; simmer for 20–30 minutes.",
+      "Season with salt and pepper and serve with your favorite toppings."
+    ],
+    "tags": ["Vegetarian", "Spicy", "Comfort Food"]
+  },
+  {
+    "_id": "3",
+    "title": "Chocolate Chip Cookies",
+    "description": "Classic chewy and buttery chocolate chip cookies with a hint of vanilla.",
+    "image": "https://images.unsplash.com/photo-1511974035430-5de47d3b95da?auto=format&fit=crop&w=800&q=60",
+    "ingredients": [
+      "2 1/4 cups all-purpose flour",
+      "1 tsp baking soda",
+      "1 tsp salt",
+      "1 cup unsalted butter, softened",
+      "3/4 cup granulated sugar",
+      "3/4 cup brown sugar",
+      "1 tsp vanilla extract",
+      "2 large eggs",
+      "2 cups semi-sweet chocolate chips"
+    ],
+    "steps": [
+      "Preheat oven to 375°F (190°C).",
+      "Combine flour, baking soda, and salt in a small bowl.",
+      "Beat butter, sugars, and vanilla until creamy; add eggs one at a time.",
+      "Gradually add flour mixture; stir in chocolate chips.",
+      "Drop rounded tablespoons of dough onto baking sheets.",
+      "Bake for 9–11 minutes or until golden brown; cool on wire racks."
+    ],
+    "tags": ["Dessert", "Cookies", "Baking"]
+  }
+]
