@@ -1,0 +1,20 @@
+{
+  "name": "y",
+  "version": "1.0.0",
+  "description": "This project is a full‑stack personal recipe manager built with the MERN stack and Next.js 14. The application allows you to create, read, update and delete (CRUD) recipes, complete with images, ingredients, preparation steps and tags. It features a responsive UI built with Tailwind CSS, along with search and filtering capabilities.",
+  "homepage": "https://github.com/Kviponder/Recipes#readme",
+  "bugs": {
+    "url": "https://github.com/Kviponder/Recipes/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kviponder/Recipes.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
