@@ -5,21 +5,21 @@
  * environment variable (falls back to a relative path during development).
  */
 
-const BASE_URL = process.env.NEXT_PUBLIC_API_URL || '';
+const BASE_URL = process.env.NEXT_PUBLIC_API_URL || "";
 
 async function handleResponse(res) {
   if (!res.ok) {
     const error = await res.json().catch(() => ({}));
-    throw new Error(error.message || 'An unexpected error occurred');
+    throw new Error(error.message || "An unexpected error occurred");
   }
   return res.json();
 }
 
 export async function fetchRecipes() {
-  const res = await fetch(`${BASE_URL}/api/recipes`);
-  return handleResponse(res);
+  const res = await fetch("http://localhost:5001/api/recipes");
+  if (!res.ok) throw new Error("Failed to fetch recipes");
+  return await res.json();
 }
-
 export async function fetchRecipeById(id) {
   const res = await fetch(`${BASE_URL}/api/recipes/${id}`);
   return handleResponse(res);
@@ -27,8 +27,8 @@ export async function fetchRecipeById(id) {
 
 export async function createRecipe(data) {
   const res = await fetch(`${BASE_URL}/api/recipes`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
     body: JSON.stringify(data),
   });
   return handleResponse(res);
@@ -36,8 +36,8 @@ export async function createRecipe(data) {
 
 export async function updateRecipe(id, data) {
   const res = await fetch(`${BASE_URL}/api/recipes/${id}`, {
-    method: 'PUT',
-    headers: { 'Content-Type': 'application/json' },
+    method: "PUT",
+    headers: { "Content-Type": "application/json" },
     body: JSON.stringify(data),
   });
   return handleResponse(res);
@@ -45,7 +45,7 @@ export async function updateRecipe(id, data) {
 
 export async function deleteRecipe(id) {
   const res = await fetch(`${BASE_URL}/api/recipes/${id}`, {
-    method: 'DELETE',
+    method: "DELETE",
   });
   return handleResponse(res);
 }
