@@ -1,12 +1,12 @@
 [
   {
     "_id": "1",
-    "title": "Spaghetti Carbonara",
+    "title": "Using mock data due to fetch error Carbonara",
     "description": "A classic Italian pasta dish with eggs, cheese, pancetta and pepper.",
     "image": "https://images.unsplash.com/photo-1604908177223-f3d45ced4a2b?auto=format&fit=crop&w=800&q=60",
     "ingredients": [
       "200g spaghetti",
-      "100g pancetta or bacon, diced",
+      "100g pancetta or bacon, diced ",
       "2 large eggs",
       "50g grated pecorino cheese",
       "50g grated parmesan cheese",

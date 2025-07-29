@@ -1,8 +1,8 @@
-import '../app/globals.css';
+import "../app/globals.css";
 
 export const metadata = {
-  title: 'My Recipe Collection',
-  description: 'A personal recipe book built with Next.js and Tailwind CSS',
+  title: "🍝🍝🍝",
+  description: "A personal recipe book built with Next.js and Tailwind CSS",
 };
 
 /**
@@ -19,14 +19,19 @@ export default function RootLayout({ children }) {
       <body className="min-h-screen flex flex-col">
         <header className="bg-white shadow mb-6">
           <div className="max-w-6xl mx-auto py-4 px-4 sm:px-6 lg:px-8">
-            <h1 className="text-2xl font-bold text-gray-800">My Recipe Collection</h1>
+            <a 
+              href="/"
+              className="text-2xl font-bold text-gray-800 hover:underline"
+              >
+              Dani and Kai's Epic Recipes
+            </a>{" "}
           </div>
         </header>
         <main className="flex-grow container mx-auto px-4 sm:px-6 lg:px-8">
           {children}
         </main>
         <footer className="bg-gray-100 py-4 text-center text-sm text-gray-500">
-          &copy; {new Date().getFullYear()} My Recipe Collection
+          &copy; {new Date().getFullYear()} Dani and Kai's Epic recipes
         </footer>
       </body>
     </html>

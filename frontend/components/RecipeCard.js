@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState } from "react";
+import Link from "next/link";
 
 /**
  * RecipeCard component displays a recipe in a card format with a front
@@ -17,9 +18,7 @@ export default function RecipeCard({ recipe, onEdit, onDelete }) {
   const toggleDetails = () => setShowDetails(!showDetails);
 
   return (
-    <div
-      className="relative bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105"
-    >
+    <div className="relative bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105">
       {/* Front side */}
       {!showDetails && (
         <button
@@ -57,9 +56,7 @@ export default function RecipeCard({ recipe, onEdit, onDelete }) {
       {/* Back side */}
       {showDetails && (
         <div className="p-4">
-          <h2 className="text-lg font-semibold mb-2">
-            {recipe.title}
-          </h2>
+          <h2 className="text-lg font-semibold mb-2">{recipe.title}</h2>
           <h3 className="font-medium text-gray-700 mt-2 mb-1">Ingredients</h3>
           <ul className="list-disc list-inside text-sm text-gray-700 space-y-1 mb-3 max-h-32 overflow-y-auto pr-2">
             {recipe.ingredients?.map((item, idx) => (
@@ -79,6 +76,13 @@ export default function RecipeCard({ recipe, onEdit, onDelete }) {
             >
               Close
             </button>
+            <Link
+              href={`/recipes/${recipe._id}`}
+              className="text-sm text-green-600 hover:underline ml-2"
+            >
+              View Full
+            </Link>
+
             <div className="space-x-2">
               {onEdit && (
                 <button

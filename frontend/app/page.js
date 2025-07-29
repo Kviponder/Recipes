@@ -1,10 +1,10 @@
 "use client";
 
-import { useEffect, useState } from 'react';
-import RecipeCard from '../components/RecipeCard';
-import SearchBar from '../components/SearchBar';
-import recipesMock from '../mocks/recipes.json';
-import { fetchRecipes, deleteRecipe } from '../lib/api';
+import { useEffect, useState } from "react";
+import RecipeCard from "../components/RecipeCard";
+import SearchBar from "../components/SearchBar";
+import recipesMock from "../mocks/recipes.json";
+import { fetchRecipes, deleteRecipe } from "../lib/api";
 
 /**
  * Home page displays a grid of recipe cards with a search bar. During
@@ -24,13 +24,26 @@ export default function HomePage() {
         setRecipes(res);
         setFiltered(res);
       } catch (err) {
-        console.warn('Using mock data due to fetch error:', err.message);
+        console.warn("Using mock data due to fetch error:", err.message);
       } finally {
         setLoading(false);
       }
     }
     load();
   }, []);
+
+  // Reads an uploaded image file and converts it to a Data URL
+  const handleFileChange = (e) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        // The result is a Base64-encoded Data URL (e.g., data:image/png;base64,...)
+        setImage(reader.result.toString());
+      };
+      reader.readAsDataURL(file);
+    }
+  };
 
   const handleSearch = (query) => {
     const lower = query.toLowerCase();
@@ -67,9 +80,9 @@ export default function HomePage() {
       </div>
       <SearchBar onSearch={handleSearch} />
       {loading ? (
-        <p>Loading recipes...</p>
+        <p>Loading recipes for the Hungry Bitch Damn...</p>
       ) : filtered.length === 0 ? (
-        <p>No recipes found.</p>
+        <p>No recipes found Stupid! Try spelling better.</p>
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {filtered.map((recipe) => (
