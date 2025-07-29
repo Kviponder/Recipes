@@ -5,7 +5,7 @@
  * environment variable (falls back to a relative path during development).
  */
 
-const BASE_URL = process.env.NEXT_PUBLIC_API_URL || "";
+export const BASE_URL = "http://localhost:5001";
 
 async function handleResponse(res) {
   if (!res.ok) {
